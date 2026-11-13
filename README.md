@@ -55,9 +55,9 @@ The sector is **moderately concentrated at the top with an expanding competitive
 
 ## 💻 Open-Source Verification & SLA Monitoring
 
-*Open-source platforms provide transparent, auditable verification mechanisms (canaries, recovery sandboxes, and uptime probes) to prove recoverability and track SLAs without relying exclusively on legal promises. Sorted in descending order by GitHub Stars.* ⭐
+*Open-source platforms provide transparent, auditable verification mechanisms (canaries, recovery sandboxes, and uptime probes) to prove recoverability and track SLAs without relying exclusively on legal promises. Sorted in descending order by GitHub_Stars.* ⭐
 
-| Project | GitHub Stars | Focus Area & Capabilities | License |
+| Project | GitHub_Stars | Focus Area & Capabilities | License |
 |---------|-------------|----------------------------|---------|
 | **[Uptime Kuma](https://github.com/louislam/uptime-kuma)** 🐻 | [![Stars](https://img.shields.io/github/stars/louislam/uptime-kuma?style=social&color=white)](https://github.com/louislam/uptime-kuma/stargazers) | **Self-hosted Uptime & SLA Monitoring Dashboard**: Multi-protocol health checks (HTTP/HTTPS, TCP, Ping, DNS, Docker container status) with SLA availability calculation, incident timeline tracking, and 90+ notification integrations. | MIT |
 | **[Restic](https://github.com/restic/restic)** 🔒 | [![Stars](https://img.shields.io/github/stars/restic/restic?style=social&color=white)](https://github.com/restic/restic/stargazers) | **Secure Immutable Backup Engine**: Fast, cryptographically secure deduplicating backup tool. Features built-in `restic check` repository verification, snapshot integrity validation, and append-only cloud storage modes for ransomware resistance. | BSD 2-Clause |
