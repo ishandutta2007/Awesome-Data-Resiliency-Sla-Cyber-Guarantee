@@ -1,6 +1,6 @@
 # Awesome-Data-Resiliency-Sla-Cyber-Guarantee
 
-# Top Data Resiliency SLA & Cyber Guarantee Ecosystem
+## Top Data Resiliency SLA & Cyber Guarantee Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Financially-Backed SLAs, Ransomware Warranties & Recovery Guarantees*  
