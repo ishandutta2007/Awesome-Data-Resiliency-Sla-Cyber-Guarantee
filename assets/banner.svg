@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070a10" />
+    </linearGradient>
+
+    <linearGradient id="cyberCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38ef7d" />
+      <stop offset="100%" stop-color="#11998e" />
+    </linearGradient>
+
+    <linearGradient id="accentPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1f2937" stroke-width="0.8" opacity="0.4" />
+    </pattern>
+
+    <style>
+      .pulse-slow {
+        animation: pulse 4s ease-in-out infinite alternate;
+      }
+      .pulse-fast {
+        animation: pulse 2.5s ease-in-out infinite alternate;
+      }
+      .dash-flow {
+        stroke-dasharray: 8, 8;
+        animation: dash 25s linear infinite;
+      }
+      .radar-sweep {
+        transform-origin: 1040px 180px;
+        animation: rotate 12s linear infinite;
+      }
+      .float-node {
+        animation: float 6s ease-in-out infinite alternate;
+      }
+      @keyframes pulse {
+        0% { opacity: 0.3; }
+        100% { opacity: 0.8; }
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -1000; }
+      }
+      @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-8px); }
+      }
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .sub-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 400;
+      }
+      .pill-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" fill="url(#bgGrad)" rx="16" />
+  <rect width="1200" height="420" fill="url(#grid)" rx="16" />
+
+  <!-- Dynamic Background Glowing Orbs -->
+  <circle cx="150" cy="100" r="140" fill="#00f2fe" opacity="0.12" filter="url(#glowCyan)" class="pulse-slow" />
+  <circle cx="1060" cy="180" r="180" fill="#6366f1" opacity="0.15" filter="url(#glowCyan)" class="pulse-fast" />
+  <circle cx="600" cy="380" r="160" fill="#11998e" opacity="0.1" filter="url(#glowGreen)" class="pulse-slow" />
+
+  <!-- Background Dynamic Network Vectors / Circuits -->
+  <g opacity="0.35">
+    <path class="dash-flow" d="M -50 80 Q 300 20 600 120 T 1250 80" fill="none" stroke="#38ef7d" stroke-width="1.5" />
+    <path class="dash-flow" d="M -50 340 Q 400 420 800 300 T 1250 360" fill="none" stroke="#00f2fe" stroke-width="1.5" />
+    <path class="dash-flow" d="M 900 0 L 1050 180 L 1200 120" fill="none" stroke="#a855f7" stroke-width="1.2" />
+  </g>
+
+  <!-- Dynamic Radar Graphic on Right Side (Background/Side element) -->
+  <g opacity="0.4" class="radar-sweep">
+    <circle cx="1040" cy="180" r="110" fill="none" stroke="#4facfe" stroke-width="1" stroke-dasharray="4, 4" />
+    <circle cx="1040" cy="180" r="70" fill="none" stroke="#4facfe" stroke-width="1" />
+    <circle cx="1040" cy="180" r="30" fill="none" stroke="#4facfe" stroke-width="1" stroke-dasharray="2, 4" />
+    <line x1="1040" y1="180" x2="1150" y2="180" stroke="#00f2fe" stroke-width="2" />
+  </g>
+
+  <!-- Right Floating Metric Card 1 (Immutable Resilience) -->
+  <g transform="translate(930, 70)" class="float-node" opacity="0.95">
+    <rect width="210" height="74" rx="10" fill="#1e293b" fill-opacity="0.8" stroke="#38ef7d" stroke-width="1.2" filter="url(#glowGreen)"/>
+    <circle cx="30" cy="37" r="14" fill="#38ef7d" fill-opacity="0.2"/>
+    <path d="M 24 37 L 28 41 L 37 32" fill="none" stroke="#38ef7d" stroke-width="2" stroke-linecap="round"/>
+    <text x="54" y="32" fill="#94a3b8" font-size="11" font-weight="600" font-family="sans-serif">DATA IMMUTABILITY</text>
+    <text x="54" y="52" fill="#f8fafc" font-size="15" font-weight="700" font-family="sans-serif">100% Guaranteed</text>
+  </g>
+
+  <!-- Right Floating Metric Card 2 (SLA & Recovery Warranty) -->
+  <g transform="translate(930, 180)" class="float-node" opacity="0.95" style="animation-delay: -2s;">
+    <rect width="210" height="74" rx="10" fill="#1e293b" fill-opacity="0.8" stroke="#00f2fe" stroke-width="1.2" filter="url(#glowCyan)"/>
+    <circle cx="30" cy="37" r="14" fill="#00f2fe" fill-opacity="0.2"/>
+    <text x="30" y="42" fill="#00f2fe" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">$</text>
+    <text x="54" y="32" fill="#94a3b8" font-size="11" font-weight="600" font-family="sans-serif">CYBER WARRANTIES</text>
+    <text x="54" y="52" fill="#f8fafc" font-size="15" font-weight="700" font-family="sans-serif">Up to $10M Payout</text>
+  </g>
+
+  <!-- Right Floating Metric Card 3 (Automated Drills) -->
+  <g transform="translate(930, 290)" class="float-node" opacity="0.95" style="animation-delay: -4s;">
+    <rect width="210" height="74" rx="10" fill="#1e293b" fill-opacity="0.8" stroke="#a855f7" stroke-width="1.2"/>
+    <circle cx="30" cy="37" r="14" fill="#a855f7" fill-opacity="0.2"/>
+    <text x="30" y="42" fill="#c084fc" font-size="13" font-weight="bold" text-anchor="middle" font-family="sans-serif">⚡</text>
+    <text x="54" y="32" fill="#94a3b8" font-size="11" font-weight="600" font-family="sans-serif">RECOVERY DRILLS</text>
+    <text x="54" y="52" fill="#f8fafc" font-size="15" font-weight="700" font-family="sans-serif">RTO/RPO Audited</text>
+  </g>
+
+  <!-- Main Hero Foreground Content (Always prominent & readable) -->
+  <g transform="translate(80, 0)">
+    <!-- Badge / Header Pill -->
+    <g transform="translate(0, 52)">
+      <rect width="320" height="32" rx="16" fill="#1f2937" fill-opacity="0.8" stroke="#374151" stroke-width="1" />
+      <circle cx="16" cy="16" r="5" fill="#38ef7d" filter="url(#glowGreen)" />
+      <text x="32" y="21" fill="#e2e8f0" font-size="12" font-family="sans-serif" font-weight="600" letter-spacing="0.5">CURATED ENTERPRISE ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title (Gradient Fill + High Contrast) -->
+    <text x="0" y="142" fill="#ffffff" font-size="44" class="title-text">
+      Awesome <tspan fill="url(#cyberCyan)">Data Resiliency SLA</tspan>
+    </text>
+    <text x="0" y="196" fill="#ffffff" font-size="42" class="title-text">
+      &amp; <tspan fill="url(#shieldGrad)">Cyber Guarantee</tspan>
+    </text>
+
+    <!-- Subtitle / Mission Statement -->
+    <text x="0" y="244" fill="#94a3b8" font-size="16.5" class="sub-text">
+      Financially-backed SLAs, ransomware warranties, automated recovery drills,
+    </text>
+    <text x="0" y="270" fill="#94a3b8" font-size="16.5" class="sub-text">
+      and verifiable disaster recovery platforms across SaaS and Open-Source.
+    </text>
+
+    <!-- Interactive / Feature Pills -->
+    <g transform="translate(0, 316)">
+      <!-- Pill 1: Cyber Warranty -->
+      <g>
+        <rect width="186" height="38" rx="8" fill="#1e293b" stroke="#38ef7d" stroke-width="1" stroke-opacity="0.6"/>
+        <text x="93" y="24" fill="#38ef7d" class="pill-text" text-anchor="middle">🛡️ Cyber Warranties</text>
+      </g>
+      <!-- Pill 2: Financially-backed SLAs -->
+      <g transform="translate(198, 0)">
+        <rect width="206" height="38" rx="8" fill="#1e293b" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.6"/>
+        <text x="103" y="24" fill="#00f2fe" class="pill-text" text-anchor="middle">💰 Financial SLAs ($10M)</text>
+      </g>
+      <!-- Pill 3: Ransomware Defense -->
+      <g transform="translate(416, 0)">
+        <rect width="186" height="38" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1" stroke-opacity="0.6"/>
+        <text x="93" y="24" fill="#c084fc" class="pill-text" text-anchor="middle">🔒 Ransomware Proof</text>
+      </g>
+      <!-- Pill 4: Open-Source Audit -->
+      <g transform="translate(614, 0)">
+        <rect width="176" height="38" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.6"/>
+        <text x="88" y="24" fill="#fbbf24" class="pill-text" text-anchor="middle">⚡ RTO/RPO Drills</text>
+      </g>
+    </g>
+  </g>
+</svg>

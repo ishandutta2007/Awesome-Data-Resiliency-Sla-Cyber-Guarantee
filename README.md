@@ -1,69 +1,88 @@
-# Awesome-Data-Resiliency-Sla-Cyber-Guarantee
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Data Resiliency SLA and Cyber Guarantee Ecosystem" width="100%">
+</p>
 
-## Top Data Resiliency SLA & Cyber Guarantee Ecosystem
+# Awesome Data Resiliency SLA & Cyber Guarantee [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-*Focused on Financially-Backed SLAs, Ransomware Warranties & Recovery Guarantees*  
-**Last updated: March 2026**
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Data Resiliency SLA & Cyber Guarantee**. These offerings provide financially-backed commitments from vendors—covering data immutability, recoverability, availability, and ransomware recovery—giving organizations contractual leverage and potential reimbursement if recovery fails.
-
-**Examples** include Druva Data Resiliency Guarantee, Rubrik Ransomware Recovery Warranty, Veeam Ransomware Warranty, Cohesity Ransomware Guarantee, Acronis Anti-Ransomware Warranty, Sophos Breach Protection Warranty, and SentinelOne Ransomware Warranty (the category leaders).
-
-**Open-source emphasis**: This section highlights every major active project for self-hosted SLA monitoring, open-source recovery drill automation, and community-driven resilience verification—ideal for organizations seeking to *prove* recoverability rather than rely on vendor promises. Note that **financially-backed guarantees are inherently commercial constructs**—no open-source project offers a warranty. The open-source path focuses on verification: automated drills, canary testing, and evidence generation that demonstrates your recovery actually works.
-
-Contributions welcome! Open an PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-| Product | Description | Pricing (Starting) | Free Tier / Trial Limits |
-|---------|-------------|-------------------|--------------------------|
-| **[Druva Data Resiliency Guarantee](https://www.druva.com/products/resiliency-guarantee)** | **The most comprehensive financially-backed guarantee in the category: up to $10M coverage across five risk categories** (Cyber, Human, Application, Operational, Environmental). Backed by five SLAs: **100% Confidentiality**, **100% Immutability** (last successful backup recoverable after ransomware), **99% Reliability**, **99.999% Durability**, and **99.5% Availability**. Available at **no additional charge** for qualifying customers who purchase the Security Posture & Observability license, meet annual spend minimums, contract length, and pass a Health Check. Payout tiers scale from $100K (for $25K–$49K annual spend) to $10M (for $1M+ spend) . | **Included at no extra charge** with qualifying Druva subscription (requires Security Posture & Observability license + spend minimum)  | No standalone free tier; guarantee bundled with Druva subscription |
-| **[Rubrik Ransomware Recovery Warranty](https://www.rubrik.com/warranty)** | **Up to $10M in coverage** for Rubrik Enterprise Edition and Rubrik Cloud Vault customers. Covers recovery costs if Rubrik cannot restore protected data after a ransomware incident. Requires: working with a Customer Experience Manager (CEM), passing health checks (initial, monthly, and upon incident), enabling Radar/Sonar, implementing MFA, retention lock, and notifying Rubrik within **12 hours** of discovery. Reimbursement request must be submitted within **1 year** of confirmed Recovery Incident . | Included with Rubrik Enterprise Edition (quote-only) | No free tier; warranty bundled with Enterprise Edition subscription |
-| **[Veeam Ransomware Recovery Warranty](https://www.veeam.com/legal/ransomware-warranty-agreement.html)** | **Up to $5M in recovery coverage** for verified ransomware incidents on Veeam Data Platform (Advanced and Premium editions) and Veeam Kasten. Requires: current TAM services, passing quarterly security assessments, running latest software version, and notifying Veeam within **12 hours** of discovery. Reimbursement request must be submitted within **6 months** of confirmed Recovery Incident . | Included with Veeam Data Platform Advanced/Premium (quote-only) | No free tier; warranty bundled with eligible subscriptions |
-| **[Cohesity Ransomware Guarantee](https://www.cohesity.com/)** | **Industry-unique "200% payout" offer**: Cohesity will match any competitor's published warranty and **double the dollar cap**. Requires equivalent terms adapted to Cohesity products. Notably, Cohesity itself publicly states that "these warranties are intentionally designed to never pay out" and lists **11 common ways vendors avoid payment**—including preexisting conditions, non-compliance with every recommendation, late notification, and customer-introduced malware. The 200% offer is essentially a competitive statement rather than a standard program . | Quote-only (match competitor terms + double cap) | No free tier; competitive offer via sales |
-| **[Acronis Anti-Ransomware Warranty](https://care.acronis.com/s/article/Acronis-Cyber-Protect-Anti-ransomware-warranty)** | **Up to $1M or 12 months of fees** (whichever is less) for eligible recovery costs. Covers **endpoints only** (disk, volume, file backups) stored in **Acronis-hosted cloud storage**. Requires: 2FA enabled, immutable storage in Compliance mode, and backup validation via checksum, screenshot, or heartbeat. Enabled by default for qualifying customers . | Included with Acronis Cyber Protect Cloud (qualifying configurations) | No free tier; warranty bundled with eligible subscriptions |
-| **[Sophos Breach Protection Warranty](https://www.sophos.com/en-us/legal/mdr-warranty)** | **Up to $1M in response expenses** for Sophos MDR Complete customers at **no additional cost**. Covers up to **$1,000 per affected endpoint**, up to **$100,000 for ransom payments** (as part of per-device limit), plus breach notification, PR, legal, and compliance expenses. No warranty tiers, no minimum contract term, no additional purchase requirements. Excludes VDI environments, SAN/NAS storage, and incidents caused by customer negligence . | **Included at no extra charge** with Sophos MDR Complete subscription  | No free tier; warranty bundled with MDR Complete |
-| **[SentinelOne Ransomware Warranty](https://www.sentinelone.com/legal/ransomware-warranty/)** | Warranty for SentinelOne Control or Complete SKU customers. Requires extensive configuration: Protection Mode set to Protect, all detection engines ON, Anti-Tamper ON, Snapshots ON, latest GA agent version, 2FA on Management Console, VSS enabled with 10% disk allocation, and **notification within 24 hours** of discovery. Customer must blacklist the threat within 1 hour and take remediation/rollback action within 1 hour . | Quote-only (bundled with eligible SKU) | No free tier; warranty requires specific SKU and configuration |
-| **[CrowdStrike Falcon Complete Limited Warranty](https://www.crowdstrike.com/)** | Limited warranty for Falcon Complete MDR customers. Explicitly **not a contract of insurance**; void in jurisdictions where deemed insurance. Liability capped at Customer's cap as set forth in the agreement. CrowdStrike reserves the right to modify warranty terms at any time with notice . | Quote-only (bundled with Falcon Complete) | No free tier; warranty bundled with Falcon Complete subscription |
-
-## Open-Source GitHub Projects
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[FireDrill](https://github.com/kirilurbonas/FireDrill)** | [![Stars](https://img.shields.io/github/stars/kirilurbonas/FireDrill?style=social&color=white)](https://github.com/kirilurbonas/FireDrill/stargazers) | **The most complete open-source recovery drill and SLA evidence platform.** Automated disaster recovery drills that **prove** backups actually restore. Features: **ransomware canary** (plant a sentinel value in production, prove every drill restores it byte-exact—catches encrypted-at-source or silently corrupted backups that row counts miss); **RTO/RPO measurement** per drill with trend history; **compliance-control export** (drills declare controls they evidence, `firedrill controls` aggregates into auditor-ready matrix with ISO27001-A.8.13, SOC2-A1.2 mappings); **Kubernetes operator** for scheduled drills via CRD; **Velero integration** for namespace-level restore verification. Go binary, Apache 2.0 . |
-| **[Pulse](https://github.com/Erchoc/pulse)** | [![Stars](https://img.shields.io/github/stars/Erchoc/pulse?style=social&color=white)](https://github.com/Erchoc/pulse/stargazers) | **Lightweight self-hosted SLA monitoring platform with global probes.** Multi-protocol monitoring (HTTP, TCP, WebSocket, DNS, ICMP, heartbeat) with probes deployable across CN, HK, SEA, EU, US regions. **Real-time SLA dashboard** with availability %, latency percentiles (p50/p95/p99), incident timeline, and **service-level SLA targets** with configurable reporting windows (7D–365D). Maintenance windows exclude planned downtime from SLA calculations. Webhook alerts to Slack, DingTalk, Feishu. Single Go binary, Apache 2.0 . |
-
-### Additional Strong Open-Source Options
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[PulseOps](https://www.npmjs.com/package/pulseops)** | — | CLI companion to Pulse (or similar SLA monitoring backends). Provides **30-day SLA summaries**, uptime/latency percentiles (all-time, 24h, 30d), incident history, and heartbeat sending. Useful for teams wanting terminal-based SLA reporting without a full dashboard . |
-
-**Frameworks for building custom systems**: The open-source path to **verifiable** resilience (not legal guarantees) is **prove it works**. Use **FireDrill** for automated recovery drills with ransomware canaries and compliance-control evidence export—this is what auditors actually want to see, not vendor warranty documents. Use **Pulse** for continuous SLA monitoring of your own services with configurable targets and incident tracking. **No open-source project offers a financially-backed warranty**; the open-source advantage is transparency and proof, not reimbursement.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Cyber warranties are **contractual instruments**, not insurance. They contain extensive eligibility requirements, exclusions, and notification deadlines that can void coverage. **Cohesity itself publicly states that these warranties are "intentionally designed to never pay out"** and lists 11 common vendor escape clauses . Do not treat a warranty as a substitute for a working backup and recovery program.
-- **Key distinctions across offerings**: Druva offers the broadest coverage (5 risk categories, $10M) and is **free with qualifying subscription** . Rubrik covers up to $10M but requires Enterprise Edition and CEM engagement . Veeam covers up to $5M with quarterly assessments . Acronis caps at **$1M or 12 months of fees** and covers **endpoints only** . Sophos offers **$1M with no extra cost** for MDR Complete customers . SentinelOne and CrowdStrike have extensive configuration requirements and notification windows (24h and 12h respectively). **Open-source tools like FireDrill provide the evidence** that your recovery actually works—which is what auditors and insurers care about more than any vendor warranty document.
+A curated directory and enterprise guide to **Data Resiliency SLAs**, **Ransomware Warranties**, and **Cyber Recovery Guarantees**. Discover enterprise SaaS platforms offering multi-million-dollar contractual coverage and production-tested open-source frameworks for disaster recovery verification, SLA/SLO monitoring, and ransomware canary drills.
 
 ---
 
-**Made for SREs, backup administrators, compliance officers, and organizations building verifiable cyber resilience.**  
-Let's make data resiliency SLAs and guarantees more transparent, measurable, and provable.
+## Table of Contents
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS & Commercial Hosted Platforms](#saas--commercial-hosted-platforms)
+- [Open-Source Verification & SLA Monitoring](#open-source-verification--sla-monitoring)
+- [Commercial Guarantees vs. Open-Source Verification](#commercial-guarantees-vs-open-source-verification)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer](#disclaimer)
+
+---
+
+## Sector Overview & Market Dynamics
+
+The global **Data Resiliency and Cyber Disaster Recovery market** is estimated at **$25B–$35B in 2026** and projected to surpass **$100B–$140B by the early 2030s**, compounding at a rapid **CAGR of ~15–17%**, driven by escalating ransomware frequencies and stringent regulatory mandates (such as DORA, NIS2, and SEC cyber disclosure rules). 
+
+The sector is **moderately concentrated at the top with an expanding competitive fringe**: established cybersecurity titans (e.g., CrowdStrike, SentinelOne) and dedicated data resiliency giants (e.g., Veeam, Rubrik, Cohesity-Veritas) command significant enterprise market share, yet intense technological convergence prevents a single "winner-take-all" monopoly. Enterprise vendors increasingly leverage financially-backed recovery warranties (ranging from $1M to $10M) not merely as marketing devices, but as competitive contractual moats to signal defense-in-depth maturity and satisfy underwriter demands in the tightening cyber insurance ecosystem.
+
+---
+
+## SaaS & Commercial Hosted Platforms
+
+*All SaaS vendors below are ranked in descending order by enterprise size (market capitalization for publicly traded corporations or latest private valuation).*
+
+| Product | Company Scale / Valuation | Pricing (Starting) | Free Tier / Trial Limits | Key Guarantees & SLAs |
+|---------|---------------------------|-------------------|--------------------------|-----------------------|
+| **[CrowdStrike Falcon Complete](https://www.crowdstrike.com/)** | **~$240B+ Market Cap** (Public: NASDAQ: CRWD, FY26 Revenue ~$4.81B) | Starting at **$59.99/device/year** (Falcon Go, min 100 devices; Falcon Complete MDR is custom enterprise quote) | **15-day free trial**; includes NGAV, device control, and mobile protection (no credit card required; up to 100 endpoints) | **Falcon Complete Limited Warranty**: Covers qualified breach remediation expenses up to standard agreement liability caps for Falcon Complete MDR customers. |
+| **[Rubrik Security Cloud](https://www.rubrik.com/warranty)** | **~$23B–$25B Market Cap** (Public: NYSE: RBRK, FY26 Revenue ~$1.32B) | Starting list benchmark at **~$150–$260/TB/month** (software/SaaS capacity; typical deals start at $50K–$150K/year) | **No perpetual free tier**; scoped sales-assisted trials (e.g., Microsoft 365 trial limited to 500 users & 10 TB capacity) | **Up to $10M Ransomware Recovery Warranty**: Covers recovery costs if Rubrik fails to restore protected data. Requires Enterprise Edition + CEM, MFA, retention lock, and notification within 12h. |
+| **[Veeam Data Platform](https://www.veeam.com/legal/ransomware-warranty-agreement.html)** | **~$15B Valuation** (Private equity: Insight Partners / TPG, ARR ~$1.7B) | Starting at **$95/workload/year** (Veeam Data Platform Essentials SMB bundle in 5-packs; standard enterprise VUL at $155–$227/workload/year) | **Perpetual Free Community Edition** for up to **10 workloads** (no technical support included); **30-day full-featured free trial** for enterprise suites | **Up to $5M Ransomware Recovery Warranty**: Included with Veeam Data Platform Advanced & Premium. Requires TAM services, quarterly health assessments, and incident notice within 12h. |
+| **[Cohesity Data Cloud](https://www.cohesity.com/)** | **~$8B Valuation** (Private: Post-Veritas merger, combined ARR ~$1.5B–$1.7B) | Starting at **~$150–$400/TB/year** (software-only BYOH) or **$29,100/year for 10 BETB** on cloud marketplaces | **No perpetual free tier**; offers a **30-day free trial** for cloud-managed DPaaS workloads (capacity restricted during trial period) | **200% Competitor Match Guarantee**: Cohesity matches any published competitor warranty terms and doubles the dollar payout ceiling. |
+| **[SentinelOne Singularity](https://www.sentinelone.com/legal/ransomware-warranty/)** | **~$7.5B–$8.2B Market Cap** (Public: NYSE: S, FY26 Revenue ~$1.001B) | Starting at **$69.99/endpoint/year** (Singularity Core; Singularity Complete with EDR starts at $179.99/endpoint/year) | **No public self-serve free tier**; structured **14-day to 30-day Proof of Concept (PoC)** available through enterprise sales / authorized MSSP partners | **Up to $1M Ransomware Warranty** ($1,000 per affected endpoint, up to $1M total per company): Requires Protection Mode ON, Anti-Tamper ON, snapshots active, VSS 10% disk allocation, and 24h breach notification. |
+| **[Sophos MDR](https://www.sophos.com/en-us/legal/mdr-warranty)** | **~$4B–$5B Valuation** (Private: Thoma Bravo buyout, ARR ~$1.27B, FY25 Revenue ~$1.22B) | Reference list price starting at **~$69.90/endpoint/year** (Endpoint Advanced) and **$200–$240/user/year** for Sophos MDR tiers | **30-day free trial** via Sophos Central; limited to 1,000 objects (users/endpoints) during evaluation with full protection features | **Up to $1M Breach Protection Warranty**: Included at no extra charge with Sophos MDR Complete. Covers up to $1,000/endpoint, up to $100K for ransom payments, legal, PR, and regulatory expenses. |
+| **[Acronis Cyber Protect Cloud](https://care.acronis.com/s/article/Acronis-Cyber-Protect-Anti-ransomware-warranty)** | **~$3.5B–$4.0B Valuation** (Private: Majority stake by EQT X, Cloud ARR growing >40% YoY) | Per-workload starting models with **$250/month Minimum Commitment** for service providers, or consumer True Image at $49.99/year | **30-day free business trial**; includes unlimited workloads/endpoints and **1 TB of Acronis Cloud Storage** quota during trial | **Up to $1M or 12 months fees Anti-Ransomware Warranty**: Covers endpoints backed up to Acronis-hosted cloud storage. Requires 2FA, immutable storage in Compliance mode, and verified backup validation. |
+| **[Druva Data Resiliency Cloud](https://www.druva.com/products/resiliency-guarantee)** | **~$1.5B–$2.0B Valuation** (Private: Series H unicorn, SaaS ARR >$200M+) | Starting at **$8.00/user/month** (for M365/workstation endpoints) or consumption credits based on post-deduplication storage | **30-day free trial** for SaaS application backups and cloud workloads (no credit card required; full policy and restore features enabled) | **Up to $10M Data Resiliency Guarantee**: Covers 5 risk dimensions (Cyber, Human, Application, Operational, Environmental) across 5 SLAs (100% Confidentiality, 100% Immutability, 99% Reliability, 99.999% Durability, 99.5% Availability). Tiered payouts start at $100K (for $25K spend) up to $10M (for $1M+ spend). |
+
+---
+
+## Open-Source Verification & SLA Monitoring
+
+*Open-source platforms provide transparent, auditable verification mechanisms (canaries, recovery sandboxes, and uptime probes) to prove recoverability and track SLAs without relying exclusively on legal promises. Sorted in descending order by GitHub Stars.*
+
+| Project | GitHub Stars | Focus Area & Capabilities | License |
+|---------|-------------|----------------------------|---------|
+| **[Uptime Kuma](https://github.com/louislam/uptime-kuma)** | [![Stars](https://img.shields.io/github/stars/louislam/uptime-kuma?style=social&color=white)](https://github.com/louislam/uptime-kuma/stargazers) | **Self-hosted Uptime & SLA Monitoring Dashboard**: Multi-protocol health checks (HTTP/HTTPS, TCP, Ping, DNS, Docker container status) with SLA availability calculation, incident timeline tracking, and 90+ notification integrations. | MIT |
+| **[Restic](https://github.com/restic/restic)** | [![Stars](https://img.shields.io/github/stars/restic/restic?style=social&color=white)](https://github.com/restic/restic/stargazers) | **Secure Immutable Backup Engine**: Fast, cryptographically secure deduplicating backup tool. Features built-in `restic check` repository verification, snapshot integrity validation, and append-only cloud storage modes for ransomware resistance. | BSD 2-Clause |
+| **[BorgBackup](https://github.com/borgbackup/borg)** | [![Stars](https://img.shields.io/github/stars/borgbackup/borg?style=social&color=white)](https://github.com/borgbackup/borg/stargazers) | **Deduplicating Archiver & Authenticated Encryption**: Industry standard for verifiable data protection. Includes tamper-evident repository authentication, append-only mode to prevent ransomware deletion, and `borg check` repair/verification. | BSD 3-Clause |
+| **[Velero](https://github.com/velero-io/velero)** | [![Stars](https://img.shields.io/github/stars/velero-io/velero?style=social&color=white)](https://github.com/velero-io/velero/stargazers) | **Kubernetes Disaster Recovery & Cluster Migration**: Back up and restore Kubernetes cluster resources and persistent volumes. Enables automated multi-region DR drills, scheduled cluster state replication, and CSI volume snapshotting. | Apache 2.0 |
+| **[Chaos Mesh](https://github.com/chaos-mesh/chaos-mesh)** | [![Stars](https://img.shields.io/github/stars/chaos-mesh/chaos-mesh?style=social&color=white)](https://github.com/chaos-mesh/chaos-mesh/stargazers) | **Cloud-Native Chaos Engineering & Resiliency Drill Platform**: Universal chaos orchestrator for Kubernetes. Simulates storage corruptions, network partitions, node failures, and I/O stress to rigorously test automated recovery and SLA resilience. | Apache 2.0 |
+| **[Sloth](https://github.com/slok/sloth)** | [![Stars](https://img.shields.io/github/stars/slok/sloth?style=social&color=white)](https://github.com/slok/sloth/stargazers) | **Prometheus Service Level Objective (SLO) Generator**: Automates multi-window multi-burn-rate SLA/SLO alerting and Prometheus metrics generation for SRE teams, enforcing rigorous SLA accountability. | Apache 2.0 |
+| **[Pyrra](https://github.com/prometheus-community/pyrra)** | [![Stars](https://img.shields.io/github/stars/prometheus-community/pyrra?style=social&color=white)](https://github.com/prometheus-community/pyrra/stargazers) | **SLO Manager for Prometheus & Kubernetes**: Manages and visualizes SLO error budgets, availability burn rates, and compliance reporting through standard Custom Resource Definitions (CRDs). | Apache 2.0 |
+| **[Pulse](https://github.com/Erchoc/pulse)** | [![Stars](https://img.shields.io/github/stars/Erchoc/pulse?style=social&color=white)](https://github.com/Erchoc/pulse/stargazers) | **Distributed Multi-Probe SLA Monitoring**: Lightweight self-hosted platform with multi-region probes. Features real-time SLA dashboards with latency percentiles (p50/p95/p99), maintenance window exclusions, and webhook alerts. | Apache 2.0 |
+| **[FireDrill](https://github.com/kirilurbonas/FireDrill)** | [![Stars](https://img.shields.io/github/stars/kirilurbonas/FireDrill?style=social&color=white)](https://github.com/kirilurbonas/FireDrill/stargazers) | **Automated Backup Recovery Drills & Audit Evidence**: Restores backups into disposable sandboxes, verifies data integrity byte-exact with ransomware canaries, measures RTO/RPO, and generates signed SOC 2 / ISO 27001 audit evidence. | Apache 2.0 |
+
+---
+
+## Commercial Guarantees vs. Open-Source Verification
+
+| Dimension | Commercial SaaS Warranties & Guarantees | Open-Source Drill & Resiliency Tooling |
+|-----------|-----------------------------------------|----------------------------------------|
+| **Core Value** | Financial risk transfer and recovery cost reimbursement (up to $10M). | Technical proof of recoverability and automated validation. |
+| **Legal Status** | Contractual warranty (not an insurance policy; subject to strict eligibility clauses). | Open-source software (MIT/Apache 2.0/BSD; AS-IS with no financial warranty). |
+| **Operational Requirements** | Adherence to vendor architecture, MFA, retention lock, TAM services, and tight notification windows (<12–24h). | Self-managed infrastructure, automated CI/CD drills, and self-hosted monitoring. |
+| **Auditor / Insurance Acceptance** | Helpful for legal procurement, but underwriters still demand technical proof. | Emits concrete proof of RTO/RPO compliance for SOC 2 (A1.2), ISO 27001 (A.8.13), and cyber insurers. |
+
+---
+
+## How to Contribute
+
+We welcome contributions from SREs, backup architects, and security engineers:
+1. Fork the repository.
+2. Update [README.md](file:///C:/Users/ishan/Documents/Projects/Awesome-Data-Resiliency-Sla-Cyber-Guarantee/README.md) following the established table formats (ensuring pricing and free tier limits are explicitly specified).
+3. If adding an open-source project, include the stargazer badge linking to its stargazer page.
+4. Submit a pull request with a brief explanation and links to official documentation.
+
+---
+
+## Disclaimer
+
+- This repository is a community-curated technical index and does not constitute legal, financial, or cybersecurity underwriting advice.
+- Vendor cyber guarantees and ransomware warranties are contractual agreements containing specific preconditions, exclusions, notification deadlines, and liability limitations. Always consult qualified legal counsel and insurance underwriters when reviewing commercial terms.
